@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/form-validation.css" rel="stylesheet">
+    <link href="assets/css/signin.css" rel="stylesheet">
+    <link href="assets/css/cssadd.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light" style="background-color: #e6f2ff!important; ">
+<div class="container" style="background-color:#e6f2ff;">
+    <div class="py-5 text-center" style="margin-top: 200px; background-color:#e6f2ff; ">
+        <img alt="" class="d-block mx-auto mb-4" height="150" src="assets/img/iiitb.png" width="150">
+        <h2>Academic ERP</h2>
+    </div>
+    <div class="container" style="padding-top: 0px; padding-bottom: 0px "  >
+        <div class="card" style="height: 420px; " >
+
+            <div class="card align-items-center " style="background-color:#ccebff ; border-color: #008ae6 ;height: 450px; border-width: medium; border-radius: 5px;padding-top: 30px;" >
+
+                <div class="col-md-10 order-md-1" >
+                    <h4 class="mb-3">Login Page</h4>
+                    <form class="needs-validation-courses" id="login-validation" novalidate
+                    >
+                        <div class="mb-3">
+                            <label for="email">Email</label>
+                            <input class="form-control" id="email" placeholder="Enter Email" required type="email" value="">
+                            <div class="invalid-feedback">
+                                Valid email is required.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password">Password</label>
+                            <input class="form-control" id="password" placeholder="Enter Password" required type="password">
+                            <div class="invalid-feedback">
+                                Please enter a Password.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="invalid-feedback">
+                                Please select a valid department.
+                            </div>
+                        </div>
+
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                        <div class="alert alert-warning" role="alert" id="login-alert" style="display: none; margin-top: 20px">
+                            Invalid Email Address or Password !!
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:10px;margin-bottom: 100px; text-align: center; ">
+        <B>Made with Passion and Dedication by Akshil and Vivek</B>
+    </div>
+</div>
+
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+</footer>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!--<script src="assets/js/addEmployee-form-validation.js"></script>-->
+<script src="assets/js/login-validation.js"></script>
+</html>

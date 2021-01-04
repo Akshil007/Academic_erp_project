@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<tr id="myinput1">
+		<td id="myInput">
+			hello
+		</td>
+		<td>
+			how
+		</td>
+	</tr>
+	<button onclick="myFunction()">Copy text</button>
+
+</body>
+<script type="text/javascript">
+function myFunction() {
+  /* Get the text field */
+  console.log("reached");
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+</html>

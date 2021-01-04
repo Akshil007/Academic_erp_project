@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Details</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="assets/css/cssadd.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    .button {
+        border-radius: 4px;
+        background-color: #008ae6;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 20px;
+        padding: 10px;
+        width: 120px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button:hover span {
+        padding-right: 5px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    .button:hover {background-color: #008ae6}
+
+    table {
+        width:100%;
+    }
+    table, th, td {
+
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+    }
+    #t01 tr:nth-child(even) {
+        background-color: #b3e0ff;
+
+    }
+    #t01 tr:nth-child(odd) {
+        background-color:#e6f5ff;
+
+    }
+    #t01 th {
+        border: 1px solid #002e4d ;
+        background-color: #002e4d;
+        color: white;
+    }
+
+</style>
+
+<body style="background-color: #e6f2ff!important; ">
+
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="login.html" class="w3-bar-item w3-button">LOGOUT</a>
+
+    <!--        <a href="user%20details.html" class="w3-bar-item w3-button">USER DETAIL</a>  -->
+</div>
+
+<!-- Page Content -->
+<div style="background-color:#4d94ff ; height: 55px;" >
+    <button  onclick="w3_open()" style="background-color:#4d94ff ; font-size: 25px; width: 55px ; border: none ;  " ><a id="nav-toggle" href="#" style="color: white">&#9776;</a></button>
+    <div class="w3-container" style="background-color:#4d94ff">
+
+    </div>
+</div>
+<div  style="background-color:#4d94ff">
+    <!--  <button  onclick="w3_open()" style="background-color:#4d94ff ; font-size: 25px; width: 55px ; border: none ;  " >☰</button>-->
+    <div class="w3-container" style="background-color:#4d94ff" >
+
+    </div>
+</div>
+
+<div class="container" style="padding-top: 100px; width:1100px; align-content: center">
+
+    <div class="card" style="background-color:#ccebff ; border-color: #008ae6 ; border-width: medium ; border-radius: 5px; ">
+        <div class="card-body">
+            <h2 class="card-title">Personal Details</h2>
+
+        </div>
+    </div>
+    <div class="col-md-12 order-md-1" style="padding-top: 75px; position: relative;">
+        <div >
+            <div class="col-md-8 order-md-1" style="padding-left:50px " >
+<!--                <h4 class="mb-3">Personal details</h4>-->
+                <form class="needs-validation-students" id="passbook" novalidate style="width: 950px">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="id">Employee Id</label>
+                            <input class="form-control" id="id" placeholder="" required type="text" readonly>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="name"> Name</label>
+                            <input class="form-control" id="name" placeholder="" required type="text" value="" readonly>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email">Email</label>
+                        <input class="form-control" id="email" placeholder="you@example.com" required type="email" readonly>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address for updates.
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="Department">Department</label>
+                            <input class="form-control" id="department" placeholder="" required type="text" readonly>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for updates.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="salary"> Current Salary</label>
+                            <input class="form-control" id="salary" placeholder="50000" required type="number" value="50000" readonly>
+                            <div class="invalid-feedback">
+                                Valid Salary is required.
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="card" style="background-color:#ccebff ; border-color: #008ae6 ; border-width: medium ; border-radius: 5px; margin-top: 50px; ">
+        <div class="card-body">
+            <h3 class="card-title">Previous Disbursement</h3>
+        </div>
+        
+    </div>
+    <form style="box-shadow: 0 0 0 0;background-color: #e6f2ff!important; " id="p">
+        <button class="btn btn-primary btn-lg btn-block" type="submit" style="width:150px;margin-left: auto;margin-right: auto;" id="copy"  >Copy details</button>
+    </form>
+    <body style="background-color: #e6f2ff!important; ">
+    <div style="padding-top: 20px; padding-bottom: 50px">
+        <table id="t01">
+            <tr>
+                <th>EMP ID</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Department</th>
+                <th>Salary</th>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    </body>
+</div>
+
+
+
+</body>
+<script>
+
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+
+</script>
+<script src="assets/js/passbook.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js" integrity="sha512-YnVU8b8PyEw7oHtil6p9au8k/Co0chizlPltAwx25CMWX6syRiy24HduUeWi/WpBbJh4Y4562du0CHAlvnUeeQ==" crossorigin="anonymous"></script>
+<!--<script type="text/javascript">-->
+<!--    function clip()-->
+<!--    {-->
+<!--        var textArea = document.createElement("P");-->
+
+
+<!--        // Avoid scrolling to bottom-->
+<!--        textArea.style.top = "0";-->
+<!--        textArea.style.left = "0";-->
+<!--        textArea.style.position = "fixed";-->
+<!--        textArea.style.display="none";-->
+<!--        document.body.appendChild(textArea);-->
+<!--        textArea.select();-->
+
+<!--        try {-->
+<!--            var successful = document.execCommand('copy');-->
+<!--            var msg = successful ? 'successful' : 'unsuccessful';-->
+<!--            console.log('Fallback: Copying text command was ' + msg);-->
+<!--        } catch (err) {-->
+<!--            console.error('Fallback: Oops, unable to copy', err);-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+</html>

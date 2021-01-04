@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD USER</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/form-validation.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--    <link href="cssadd.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="assets/css/cssadd.css" rel="stylesheet">
+
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="addUser.html" class="w3-bar-item w3-button">ADD  </a>
+    <a href="modify.html" class="w3-bar-item w3-button">MODIFY </a>
+    <a href="disburse.html" class="w3-bar-item w3-button">DISBURSE</a>
+    <a href="delete.html" class="w3-bar-item w3-button">DELETE</a>
+    <a href="passbook_account.html" class="w3-bar-item w3-button">USER DETAILS</a>
+    <a href="login.html" class="w3-bar-item w3-button">LOGOUT</a>
+
+    <!--        <a href="user%20details.html" class="w3-bar-item w3-button">USER DETAIL</a>  -->
+</div>
+
+
+<!-- Page Content -->
+<div style="background-color:#4d94ff ; height: 55px;" >
+    <button  onclick="w3_open()" style="background-color:#4d94ff ; font-size: 25px; width: 55px ; border: none ;  " ><a id="nav-toggle" href="#" style="color: white">&#9776;</a></button>
+    <div class="w3-container" style="background-color:#4d94ff" >
+    </div>
+</div>
+</body>
+<body class="bg-light" style="background-color: #e6f2ff!important; ">
+
+<div class="container" style="padding-top: 100px; height: 600px; "  >
+    <div class="card" style="height: 650px; " >
+
+        <div class="card align-items-center " style="background-color:#ccebff ; border-color: #008ae6 ;height: 650px; border-width: medium; border-radius: 5px;" >
+
+            <div class="col-md-12 order-md-1" style="padding-top: 75px; position: relative;">
+                <div >
+                    <div class="col-md-8 order-md-1" style="padding-left:50px " >
+                        <h4 class="mb-3">Add User</h4>
+                        <form class="needs-validation-students" id="student-validation" novalidate style="width: 950px">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="first_name">First name</label>
+                                    <input class="form-control" id="first_name" placeholder="" required type="text" value="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="last_name">Last name</label>
+                                    <input class="form-control" id="last_name" placeholder="" required type="text" value="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">Email</label>
+                                <input class="form-control" id="email" placeholder="you@example.com" required type="email">
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address for updates.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="Password">Password</label>
+                                    <input class="form-control" id="password" placeholder="Password" required type="text"  minlength="6">
+                                    <div class="invalid-feedback">
+                                        Passowrd requirement dont match
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="CPassword">Confirm Password</label>
+                                    <input class="form-control" id="Cpassword" placeholder="Confirm Password" required type="text"  minlength="6">
+                                    <div class="invalid-feedback">
+                                        Passowrd requirement dont match
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="department">Department</label>
+                                    <select class="custom-select d-block w-100" id="department" required>
+                                        <option value="Admin" >Admin</option>
+                                        <option value="account">Accounts</option>
+                                        <option value="security">security</option>
+                                        <option value="Teaching">Teaching Staff</option>
+                                        <option value="Placement">Placement</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid department.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="last_name">Salary</label>
+                                    <input class="form-control" id="salary" placeholder="50000" required type="number" value="">
+                                    <div class="invalid-feedback" id="Invalid_salary">
+                                        Valid Salary is required.
+                                    </div>
+                                </div>
+
+
+                                <hr class="mb-4">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Add User</button>
+                                <div class="alert alert-warning" role="alert" id="login-alert" style="display: none; margin-top: 20px">
+                                    Duplicate Email Address!!
+                                </div>
+                                <div class="alert alert-success" role="alert" id="login-success" style="display: none; margin-top: 20px">
+                                    Details saved successfully!!
+                                </div>
+                                <div class="alert alert-warning" role="alert" id="password-fail" style="display: none; margin-top: 20px">
+                                    Password and Confirm Password do not match!!
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+</footer>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/addUser.js"></script>
+</html>
